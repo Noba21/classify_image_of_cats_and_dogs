@@ -1,112 +1,71 @@
+# 🐱🐶 Cats vs Dogs Classification using SVC
 
-
-```markdown
-# 🐱🐶 Cats vs Dogs Image Classification (SVC Model)
-
-This project implements an **image classification system** that distinguishes between images of **cats** and **dogs** using a **Support Vector Classifier (SVC)**.  
-It’s a simple yet powerful example of applying **machine learning** to computer vision tasks.
+This repository contains a machine learning project that classifies images of cats and dogs using a Support Vector Classifier (SVC) model.
 
 ---
 
 ## 📌 Project Overview
-- **Goal:** Automatically classify whether a given image is of a cat or a dog.
-- **Approach:** 
-  - Convert images into grayscale and resize for uniformity.
-  - Flatten image data into feature vectors.
-  - Train an **SVC model** with optimized kernel parameters.
-- **Dataset:** [Kaggle - Dogs vs Cats Dataset](https://www.kaggle.com/c/dogs-vs-cats/data) *(or any other dataset you used)*
+
+This project aims to build an image classification model that can differentiate between images of cats and dogs. The **Support Vector Classifier (SVC)** is used as the machine learning algorithm due to its strong performance in classification tasks with well-separated classes.
+
+The dataset contains labeled images of cats and dogs, which are preprocessed and split into training and testing sets before model training.
 
 ---
 
-## 🛠️ Tech Stack
-- **Language:** Python 3.x
-- **Libraries:**
-  - `numpy` & `pandas` → Data handling
-  - `opencv-python` → Image preprocessing
-  - `scikit-learn` → Model building and evaluation
-  - `matplotlib` → Data visualization
+## 📂 Dataset
+
+* **Source:** Commonly available Cats vs Dogs dataset from Kaggle.
+* **Classes:**
+
+  * `Cat`
+  * `Dog`
+* **Preprocessing Steps:**
+
+  * Image resizing to a consistent dimension.
+  * Grayscale conversion for simplified computation.
+  * Flattening images into 1D arrays.
+  * Normalization of pixel values.
 
 ---
 
-## 📂 Project Structure
-```
+## ⚙️ Model Details
 
-cats-vs-dogs-svc/
-│
-├── dataset/                # Images of cats and dogs
-├── notebooks/              # Jupyter notebooks for experiments
-├── src/                    # Source code
-│   ├── preprocess.py       # Image preprocessing functions
-│   ├── train.py            # Model training script
-│   └── predict.py          # Prediction script
-├── requirements.txt        # Python dependencies
-├── README.md               # Project documentation
-└── model.pkl               # Saved trained SVC model
-
-````
+* **Algorithm:** Support Vector Classifier (SVC)
+* **Kernel:** Linear, Polynomial, RBF (tested)
+* **Evaluation Metrics:** Accuracy score
 
 ---
 
-## ⚙️ Installation & Setup
-1. **Clone the repository**
+## 📊 Results
+
+* Model performance was evaluated on the testing dataset.
+* Accuracy score achieved: **(65)**
+
+---
+
+## 🚀 How to Run
+
+1. Clone the repository:
+
    ```bash
    git clone https://github.com/your-username/cats-vs-dogs-svc.git
    cd cats-vs-dogs-svc
-````
-
-2. **Install dependencies**
+   ```
+2. Install the required dependencies:
 
    ```bash
    pip install -r requirements.txt
    ```
-
-3. **Prepare dataset**
-
-   * Download the dataset and place it inside the `dataset/` folder.
-   * Ensure images are named/labeled properly (e.g., `cat.1.jpg`, `dog.1.jpg`).
+3. Place your dataset inside the project folder.
+4. Run the training script or Jupyter Notebook to train and evaluate the model.
 
 ---
 
-## 🚀 Usage
+## 📈 Future Improvements
 
-### **Train the model**
-
-```bash
-python src/train.py
-```
-
-### **Make predictions**
-
-```bash
-python src/predict.py --image_path path/to/image.jpg
-```
+* Experiment with deep learning models like CNNs for higher accuracy.
+* Implement data augmentation to improve model generalization.
+* Deploy the model as a web application for easy accessibility.
 
 ---
 
-## 📊 Model Performance
-
-| Metric    | Value |
-| --------- | ----- |
-| F1-score  | 63%   |
-| Precision | 65%   |
-| Recall    | 61%   |
-
-*Results may vary depending on dataset split and hyperparameters.*
-
----
-
-## 🔮 Future Improvements
-
-* Add a **deep learning model** (e.g., CNN) for improved accuracy.
-* Implement a **web interface** for easy image uploads.
-* Experiment with **data augmentation** to improve generalization.
-
----
-
-
-
-
----
-
-If you want, I can also make a **visually appealing version** of this README with badges, a preview image, and GitHub-style tables so it looks more professional on your profile. That will make your project stand out.
-```
